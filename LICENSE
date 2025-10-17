@@ -1,0 +1,31 @@
+
+---
+
+# 5) CONTRIBUTING + Good repo hygiene
+Create `CONTRIBUTING.md` with short guidelines:
+- How to report issues
+- How to submit PRs (fork → branch → PR)
+- Code style and script safety notes (e.g., don’t run as root unless necessary)
+
+Add a simple `ISSUE_TEMPLATE.md` if you want.
+
+---
+
+# 6) Add topics & README badges on GitHub
+- On the repo page, click **Manage topics** and add: `bash`, `shell`, `security`, `networking` etc.  
+- Add a short badge for license, stars, or CI later.
+
+---
+
+# 7) Make your scripts safe & documented
+- Use `set -euo pipefail` where appropriate  
+- Validate inputs and warn about required permissions  
+- Add comments to your scripts and usage examples
+
+Example header for scripts:
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+# Simple Network Scanner
+# Author: Your Name
+# Usage: ./scan.sh 192.168.1
